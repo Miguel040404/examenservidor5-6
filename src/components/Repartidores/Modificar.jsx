@@ -1,17 +1,17 @@
-// import { modificarRepartidor } from "@/lib/actions";
+import { modificarRepartidor } from "@/lib/actions";
 
-// function RepartidorModificar({ repartidor }) {
+function RepartidorModificar({ repartidor }) {
 
-//     return (
-//         <form action={modificarRepartidor}>
-//             <input type="hidden" name="id" defaultValue={repartidor.id} />
-//             <input name='nombre' defaultValue={repartidor.nombre} />
-//             <input name='telefono' defaultValue={repartidor.telefono} />
+    return (
+        <form action={modificarRepartidor}>
+            <input type="hidden" name="id" defaultValue={repartidor.id} />
+            <input name='nombre' defaultValue={repartidor.nombre} />
+            <input name='telefono' defaultValue={repartidor.telefono} />
 
-//             <button className="border-2 border-black">Modificar</button>
-//         </form>
-//     );
-// }
+            <button className="border-2 border-black">Modificar</button>
+        </form>
+    );
+}
 
-// export default RepartidorModificar;
+export default RepartidorModificar;
 

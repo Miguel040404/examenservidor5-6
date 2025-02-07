@@ -1,18 +1,18 @@
-// import { insertarRepartidor } from "@/lib/actions";
+import { insertarRepartidor } from "@/lib/actions";
 
-// function RepartidorInsertar() {
-//     return (
-//         <form action={insertarRepartidor}>
-//             <input name="nombre" placeholder="Nombre del repartidor" />
-//             <input name="telefono" placeholder="Teléfono del repartidor" />
+function RepartidorInsertar() {
+    return (
+        <form action={insertarRepartidor}>
+            <input name="nombre" placeholder="Nombre del repartidor" />
+            <input name="telefono" placeholder="Teléfono del repartidor" />
 
 
-//             <button className="border-2 border-black disabled:bg-gray-200">
-//                 insertar
-//             </button>
-//         </form>
-//     );
-// }
+            <button className="border-2 border-black disabled:bg-gray-200">
+                insertar
+            </button>
+        </form>
+    );
+}
 
-// export default RepartidorInsertar;
+export default RepartidorInsertar;
 
