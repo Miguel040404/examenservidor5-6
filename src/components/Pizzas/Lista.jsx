@@ -3,10 +3,10 @@
 import { obtenerPizzas } from "@/lib/data";
 // import Link from "next/link";
 
-// import PizzaModificar from "./Modificar";
-// import PizzaEliminar from "./Eliminar";
-// import PizzaInsertar from "./Insertar";
-// import Modal from "@/components/Modal";
+import PizzaModificar from "./Modificar";
+import PizzaEliminar from "./Eliminar";
+import PizzaInsertar from "./Insertar";
+import Modal from "@/components/Modal";
 
 export default async function ListaPizzas() {
 
@@ -14,9 +14,9 @@ export default async function ListaPizzas() {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* <Modal texto="Insertar" className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out"> */}
-                {/* <PizzaInsertar /> */}
-            {/* </Modal> */}
+            <Modal texto="Insertar" className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
+                <PizzaInsertar />
+            </Modal>
 
             {
                 pizzas.map(pizza =>
@@ -28,13 +28,13 @@ export default async function ListaPizzas() {
                         <div>
                             {/* <Link href={`/pizzas/${pizza.id}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver</Link> */}
 
-                            {/* <Modal texto="Modificar" className="bg-yellow-500 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out"> */}
-                               {/* <PizzaModificar pizza={pizza} /> */}
-                            {/* </Modal> */}
+                            <Modal texto="Modificar" className="bg-yellow-500 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
+                               <PizzaModificar pizza={pizza} />
+                            </Modal>
                             
-                            {/* <Modal texto="Eliminar" className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out"> */}
-                               {/* <PizzaEliminar pizza={pizza} /> */}
-                            {/* </Modal> */}
+                            <Modal texto="Eliminar" className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
+                               <PizzaEliminar pizza={pizza} />
+                            </Modal>
                         </div>
                     </li>
                 )
