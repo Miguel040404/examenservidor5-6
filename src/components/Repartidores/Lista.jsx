@@ -14,9 +14,9 @@ export default async function ListaRepartidores() {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* <Modal texto="Insertar" className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
-                <RepartidorInsertar />
-            </Modal> */}
+            {/* <Modal texto="Insertar" className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out"> */}
+                {/* <RepartidorInsertar /> */}
+            {/* </Modal> */}
 
             {
                 repartidores.map(repartidor =>

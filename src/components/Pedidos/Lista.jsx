@@ -14,9 +14,9 @@ export default async function ListaPedidos() {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* <Modal texto="Insertar" className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
-                <PedidoInsertar />
-            </Modal> */}
+            {/* <Modal texto="Insertar" className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out"> */}
+                {/* <PedidoInsertar /> */}
+            {/* </Modal> */}
 
             {
                 pedidos.map(pedido =>
@@ -34,11 +34,11 @@ export default async function ListaPedidos() {
                             {/* <Link href={`/pedidos/${pedido.id}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver</Link> */}
 
                             {/* <Modal texto="Modificar" className="bg-yellow-500 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out"> */}
-                               {/* <PedidoModificar pedido={pedido} /> */}
+                               {/* <PedidoModificar pedido={pedido}/> */}
                             {/* </Modal> */}
                             
                             {/* <Modal texto="Eliminar" className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out"> */}
-                               {/* <PedidoEliminar pedido={pedido} /> */}
+                               {/* <PedidoEliminar  pedido={pedido}/> */}
                             {/* </Modal> */}
                         </div>
                     </li>
