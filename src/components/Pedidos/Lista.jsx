@@ -1,6 +1,6 @@
 //------------------------------------------- componente servidor
 
-import { obtenerPedidos } from "@/lib/data";
+import { obtenerPedidos, obtenerRepartidores } from "@/lib/data";
 // import Link from "next/link";
 
 import PedidoModificar from "./Modificar";
@@ -11,11 +11,12 @@ import Modal from "@/components/Modal";
 export default async function ListaPedidos() {
 
     const pedidos = await obtenerPedidos();
+    const repartidores = await obtenerRepartidores();
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Modal texto="Insertar" className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
-                <PedidoInsertar />
+                <PedidoInsertar repartidores={repartidores} />
             </Modal>
 
             {
@@ -34,7 +35,7 @@ export default async function ListaPedidos() {
                             {/* <Link href={`/pedidos/${pedido.id}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver</Link> */}
 
                             <Modal texto="Modificar" className="bg-yellow-500 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
-                               <PedidoModificar pedido={pedido}/>
+                               <PedidoModificar pedido={pedido} repartidores={repartidores}/>
                             </Modal>
                             
                             <Modal texto="Eliminar" className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md cursor-pointer transition-colors duration-300 ease-in-out">
