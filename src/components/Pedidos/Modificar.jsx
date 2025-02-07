@@ -18,7 +18,7 @@ function PedidoModificar({ pedido, repartidores, pizzas }) {
 
             {/* <input name='repartidorId' defaultValue={pedido.repartidorId} /> */}
 
-            <select name="repartidorId" defaultValue={pedido.repartidorId}>
+            <select key={pedido.repartidorId} name="repartidorId" defaultValue={pedido.repartidorId}>
                 <option value="">-- Seleccione un repartidor --</option>
                 {repartidores.map(repartidor => (
                     <option key={repartidor.id} value={repartidor.id}>
